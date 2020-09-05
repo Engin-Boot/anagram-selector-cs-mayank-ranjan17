@@ -35,7 +35,7 @@ namespace Anagram
             return false;
         }
         
-        public List<string> NotAnagramList(List<string> candidates,List<string> NotAnagaram)
+        public List<string> NotAnagramList(String word,List<string> candidates,List<string> NotAnagaram)
         {
               for(int i=0;i<candidates.Count;i++)
               {
@@ -50,7 +50,7 @@ namespace Anagram
 
             List<string> NotAnagaram = new List<string>();
             
-            NotAnagaram=NotAnagramList(candidates,NotAnagaram);
+            NotAnagaram=NotAnagramList(word,candidates,NotAnagaram);
             
             for(int i=0;i<NotAnagaram.Count;i++)
             {
