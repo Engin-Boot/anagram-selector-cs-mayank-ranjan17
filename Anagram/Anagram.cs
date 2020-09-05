@@ -34,17 +34,23 @@ namespace Anagram
             }
             return false;
         }
-        public List<string> SelectAnagrams(string word, List<string> candidates) {
-
-            List<string> NotAnagaram = new List<string>();
-
-            for(int i=0;i<candidates.Count;i++)
-            {
+        
+        public List<string> NotAnagramList(List<string> candidates,List<string> NotAnagaram)
+        {
+              for(int i=0;i<candidates.Count;i++)
+              {
                 if(!WordPairIsAnagram(word,candidates[i]))
                 {
                     NotAnagaram.Add(candidates[i]);
                 }
-            }
+              }
+            return NotAnagram;
+        }
+        public List<string> SelectAnagrams(string word, List<string> candidates) {
+
+            List<string> NotAnagaram = new List<string>();
+            
+            NotAnagaram=NotAnagramList(candidates,NotAnagram);
             
             for(int i=0;i<NotAnagaram.Count;i++)
             {
