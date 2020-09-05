@@ -50,7 +50,7 @@ namespace Anagram
 
             List<string> NotAnagaram = new List<string>();
             
-            NotAnagaram=NotAnagramList(candidates,NotAnagram);
+            NotAnagaram=NotAnagramList(candidates,NotAnagaram);
             
             for(int i=0;i<NotAnagaram.Count;i++)
             {
